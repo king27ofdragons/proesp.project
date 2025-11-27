@@ -1,151 +1,168 @@
-# 🏃‍♂️ PROESP-Br — Interface Web de Avaliação Física (IHM)
+# 🏃 PROESP-Br — Interface Web de Avaliação Física (IHM)
 
-Este projeto consiste no desenvolvimento de uma **interface web funcional de alta fidelidade** para simular a coleta de dados da avaliação física baseada no **Manual PROESP-Br**.  
+Este projeto consiste no desenvolvimento de uma **interface web de alta fidelidade** para simular a coleta de dados da avaliação física do **Manual PROESP-Br**, aplicando na prática os **princípios de Interação Humano-Computador (IHM)**.
 
-O objetivo principal do sistema é aplicar, na prática, os **conceitos de Interação Humano-Computador (IHM)**, garantindo:
-- Eficiência de uso
-- Prevenção de erros
-- Feedback imediato ao usuário
-- Clareza visual e organização
+O sistema foi projetado para oferecer:
+- Clareza visual  
+- Organização das informações  
+- Prevenção de erros  
+- Acessibilidade  
+- Feedback imediato ao usuário  
 
 ---
 
-## 🎯 Objetivo do Sistema
+## 🎯 Objetivo do Projeto
 
-A aplicação permite simular a coleta de dados em três etapas principais:
+Desenvolver uma interface funcional que simule, de forma organizada e intuitiva, a coleta de dados da avaliação física do PROESP-Br, dividida em **três etapas principais**:
 
-1. **Triagem e Identificação**
+1. **Identificação e Triagem**
 2. **Antropometria**
 3. **Testes Motores**
 
-O sistema foi desenvolvido apenas com:
-- **HTML semântico**
-- **CSS puro**
-- **JavaScript puro**
-- Sem uso de frameworks
+Todo o sistema foi desenvolvido exclusivamente com:
+- ✅ HTML semântico  
+- ✅ CSS puro  
+- ✅ JavaScript puro  
+- ❌ Sem uso de frameworks  
 
 ---
 
-## 🧠 Aplicação dos Conceitos de IHM
-
-### ✅ Lei de Fitts
-Os botões e campos de entrada possuem:
-- Tamanho grande
-- Espaçamento adequado
-- Fácil acessibilidade ao clique e toque  
-
-Isso reduz o esforço do usuário e aumenta a velocidade da interação.
+## 🧠 Aplicação dos Princípios de IHM
 
 ---
 
-### ✅ Lei de Hick-Hyman
-O sistema foi dividido em apenas **3 formulários principais**, reduzindo a sobrecarga de escolhas:
-- Identificação/Triagem
-- Antropometria
-- Testes Motores  
+### ✅ Lei de Fitts (Tamanho e Acessibilidade dos Alvos)
 
-Isso facilita a tomada de decisão e torna a navegação mais intuitiva.
+Os elementos interativos foram projetados com dimensões amplas para facilitar o clique e reduzir erros:
+
+- Botão principal com:
+  - `width: 100%`
+  - `height: 70px`
+  - Fonte grande e com espaçamento (`letter-spacing`)
+- Campos de entrada ocupam 100% da largura do formulário
+
+Isso garante rapidez, conforto e precisão na interação.
+
+---
+
+### ✅ Lei de Hick-Hyman (Redução da Sobrecarga Cognitiva)
+
+O sistema foi dividido em apenas **três telas principais**, reduzindo a quantidade de decisões simultâneas:
+
+- Uma etapa por vez
+- Fluxo linear e intuitivo
+- Sem excesso de opções visíveis ao mesmo tempo
+
+Isso facilita a navegação e melhora a experiência do usuário.
 
 ---
 
 ### ✅ Feedback ao Usuário
-A interface fornece feedback por meio de:
-- Mudança de cores
-- Respostas visuais ao clicar nos botões
-- Atualização dinâmica de campos quando aplicado pelo JavaScript
 
-Esses recursos informam ao usuário que sua ação foi reconhecida corretamente.
+O sistema oferece feedback visual por meio de:
+
+- Efeito `hover` no botão com:
+  - Aumento de brilho (`filter: brightness`)
+  - Alteração no espaçamento das letras
+- Alteração visual nos campos ao receber foco (`:focus`)
+
+Esses recursos informam claramente que a ação do usuário foi reconhecida.
 
 ---
 
 ### ✅ Prevenção de Erros
-Foram aplicadas validações por meio de:
-- `type="number"` nos campos numéricos
-- Uso de `step` para limitar casas decimais
-- Separação correta de unidades (cm, kg, segundos)
 
-Isso evita a entrada de dados inválidos.
+Foram aplicadas estratégias de prevenção de erros como:
+
+- Uso de `input` e `select` com validação por tipo
+- Separação adequada por campos específicos
+- Organização lógica dos dados
+- Destaque visual no campo ativo
+
+Esses fatores evitam preenchimentos incorretos.
 
 ---
 
-### ✅ Princípios da Gestalt
-Os campos são organizados visualmente por agrupamento:
-- Cada formulário representa uma etapa específica
-- Uso de `fieldset` para separar blocos de informações
-- Organização lógica por tipo de capacidade física
+### ✅ Princípios da Gestalt (Organização Visual)
 
-Isso melhora a percepção visual e a compreensão das informações.
+A organização visual do sistema utiliza:
+
+- `fieldset` para agrupar informações relacionadas
+- Bordas e espaçamentos bem definidos
+- Separação clara entre blocos de conteúdo
+- Layout limpo e padronizado
+
+Isso facilita a leitura e a compreensão dos dados.
 
 ---
 
 ### ✅ Acessibilidade
-A acessibilidade foi considerada através de:
-- Alto contraste entre fundo e texto
-- Tamanho de fonte confortável
-- Navegação funcional pelo teclado (tecla TAB)
-- Campos e botões bem destacados
+
+A acessibilidade foi considerada por meio de:
+
+- Alto contraste entre fundo, formulário e texto
+- Fontes legíveis
+- Campos grandes
+- Navegação funcional via teclado (TAB)
+- Layout responsivo para telas menores
 
 ---
 
-## 🎨 Estilização (CSS)
+## 🎨 Design e Estilização (CSS)
 
-Principais características do layout:
+O projeto adota uma **paleta sofisticada e moderna**, com cores quentes e contrastantes, utilizando variáveis CSS:
 
-- Formulário centralizado
-- Bordas arredondadas
-- Botões grandes e acessíveis
-- Cores suaves para conforto visual
-- Destaque para botões de ação
+```css
+:root {
+  --laranja-profundo: #2b1f1c;
+  --laranja-envelhecido: #7a4a34;
+  --bege-contraste: #f4f1ee;
+  --branco-suave: #fbfaf8;
+  --texto-escuro: #1f1f1f;
+}
+```
+  Principais características visuais:
 
-Exemplo prático:
-- O botão possui:
-  - Bordas arredondadas apenas na parte inferior
-  - Cor contrastante
-  - Altura aumentada para melhor interação
+  Fundo com gradiente radial
 
----
+  Formulário com bordas sólidas e layout limpo
 
-## 📂 Estrutura do Projeto
+  Campos com estilo minimalista e foco animado
 
+  Botão com efeito cinematográfico ao passar o mouse
+
+  Layout totalmente responsivo
+
+  Fundo suave para reduzir cansaço visual:
+  background: rgb(239, 235, 241);
+
+📂 Estrutura do Projeto
 /proesp.project
+│
+├── index.html          → Formulário de Triagem
+├── antropometria.html → Avaliação Antropométrica
+├── motores.html       → Testes Motores
+├── style.css          → Estilização completa
+└── script.js          → Lógica e interações
 
-  ─ index.html → Página inicial
-  ─ antropometria.html → Formulário de Antropometria
-  ─ motores.html → Testes Motores
-  ─ style.css → Estilização
-  ─ script.js → Lógica e interações
+🚀 Como Executar o Projeto
+🔹 Opção 1 — Execução Local
 
+Baixe os arquivos
 
----
+Abra o arquivo:
 
-## 🚀 Como Executar o Projeto
+index.html
 
-1. Baixe os arquivos do repositório
-2. Abra o arquivo:
+🔹 Opção 2 — Acesso Online (GitHub Pages)
 
-3. Navegue entre os formulários normalmente
+O projeto pode ser acessado diretamente pelo link:
 
-OU
+https://king27ofdragons.github.io/proesp.project/
 
-Acesse pelo GitHub Pages (link fornecido pelo autor).
-
----
-
-## 👨‍🎓 Autor
+👨‍🎓 Autor
 
 Projeto desenvolvido por:
-**Thiago**
+Thiago
 
-Disciplina: Interação Humano-Computador (IHM)
-
----
-
-## ✅ Conclusão
-
-O projeto atende aos requisitos propostos, aplicando de forma prática os princípios de IHM, oferecendo uma interface:
-- Intuitiva
-- Acessível
-- Organizada
-- Funcional
-
-Servindo como uma simulação eficiente da coleta de dados do protocolo PROESP-Br.
+Disciplina: interface do usuario.
